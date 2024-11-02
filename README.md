@@ -95,67 +95,80 @@ This file demonstrates the mathematical power behind neural network computations
 
 ---
 ---
+# Contents
+- **main.py**: Implements an RNN to classify handwritten digits from the MNIST dataset.
+- **rnn.py**: Implements a character-level RNN for name classification based on the language of origin.
+- **utils.py**: Contains utility functions for loading data and processing inputs.
+
+## Recurrent Neural Networks (RNN)
+RNNs are a class of neural networks designed for sequence data, where the output from the previous step is fed as input to the current step. Unlike traditional feedforward networks, RNNs can maintain a hidden state that gets updated at each time step, allowing them to learn from sequences of arbitrary length.
+
+### Key Components:
+- **Hidden State**: The memory of the network that is passed from one time step to the next. This allows the network to capture information about previous inputs.
+- **Input Sequence**: The input to the RNN is typically a sequence of vectors. In `main.py`, each image from the MNIST dataset is represented as a sequence of pixels (28 pixels per row over 28 rows).
 
 ## Gated Recurrent Units (GRU) and Long Short-Term Memory (LSTM)
 Both GRU and LSTM are advanced types of RNNs designed to address the vanishing gradient problem that standard RNNs face when learning long-range dependencies in sequences.
 
 ### LSTM:
 It introduces three gates:
-- **Input Gate:** Controls how much of the new information to let into the memory.
-- **Forget Gate:** Decides how much of the old memory to forget.
-- **Output Gate:** Determines how much of the memory to output to the next time step.
+- **Input Gate**: Controls how much of the new information to let into the memory.
+- **Forget Gate**: Decides how much of the old memory to forget.
+- **Output Gate**: Determines how much of the memory to output to the next time step.
 
 This architecture allows LSTMs to retain information over long sequences, making them effective for tasks such as language modeling and translation.
 
 ### GRU:
 It combines the forget and input gates into a single update gate. This results in a simpler architecture while still effectively capturing dependencies over time.
 
----
+## Implementation Details:
 
-## Implementation Details
-
-### main.py
+## main.py
 In `main.py`, we implement a simple RNN to classify the MNIST digits:
 
-**Dataset Loading:**
+### Dataset Loading:
 - The MNIST dataset is loaded using torchvision, which contains images of handwritten digits (0-9).
 - Each image is transformed into a tensor and loaded into batches using DataLoader.
 
-**Model Definition:**
-- The RNN class defines the network structure:
-  - An RNN layer followed by a fully connected (linear) layer to produce class probabilities.
-  - The forward method processes the input sequence and returns the output.
+### Model Definition:
+- The RNN class defines the network structure: an RNN layer followed by a fully connected (linear) layer to produce class probabilities.
+- The forward method processes the input sequence and returns the output.
 
-**Training Loop:**
+### Training Loop:
 - The model is trained over several epochs, calculating the loss using cross-entropy loss and updating the model weights via backpropagation.
 
-**Testing Phase:**
+### Testing Phase:
 - After training, the model's accuracy is evaluated on a test dataset.
 
-### rnn.py
+## rnn.py
 In `rnn.py`, we define an RNN for classifying names based on their languages:
 
-**Model Architecture:**
+### Model Architecture:
 - The RNN class includes input-to-hidden (i2h) and input-to-output (i2o) layers, along with softmax activation to get probabilities for each category.
 
-**Training Process:**
+### Training Process:
 - The training function iterates over the characters in a name, updating the hidden state at each step and calculating loss using Negative Log Likelihood Loss.
 
-**Prediction:**
+### Prediction:
 - A separate function is provided to predict the category of a name based on the trained model.
 
-### utils.py
+## utils.py
 This module provides various utility functions for data preprocessing:
 
-**Data Loading:** Loads names from text files categorized by language, normalizes the names to ASCII, and prepares the data for training.
-
-**Tensor Conversion:** Converts letters to one-hot encoded tensors for input to the model.
-
+- **Data Loading**: Loads names from text files categorized by language, normalizes the names to ASCII, and prepares the data for training.
+- **Tensor Conversion**: Converts letters to one-hot encoded tensors for input to the model.
+- 
 ---
 
 ## How to Run the Code
-- **Neural Networks folder:** To run these files, you’ll need: - Python (preferably version 3.7 or later) - Required libraries: `numpy`, `matplotlib`, and `nnfs` Install libraries using: ```bash pip install numpy matplotlib nnfs
+- **Neural Networks folder:** To run these files, you’ll need: - Python (preferably version 3.7 or later) - Required libraries: `numpy`, `matplotlib`, and `nnfs` Install libraries using:
+```bash
+  pip3 install numpy matplotlib nnfs
+```
 - **Install Dependencies for RNN folder:** Make sure you have PyTorch installed along with torchvision.
+```bash
+  pip3 install pytorch
+```
 - **Download Data:** Run the code to download the MNIST dataset automatically. For name classification, ensure that the dataset of names is available in the `data/names` directory.
 - **Run the Scripts:**
   - For digit classification, run `python main.py`.
