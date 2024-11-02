@@ -142,7 +142,7 @@ In `rnn.py`, we define an RNN for classifying names based on their languages:
 ### Prediction:
 - A separate function is provided to predict the category of a name based on the trained model.
 
-## 12. Hnad Written Digits
+## 12. Hand Written Digits
 In `main.py`, we implement a simple RNN to classify the MNIST digits:
 
 ### Dataset Loading:
