@@ -133,30 +133,30 @@ This module provides various utility functions for data preprocessing:
 ## 11. Last Name Classification
 In `rnn.py`, we define an RNN for classifying names based on their languages:
 
-### Model Architecture:
+**Model Architecture:
 - The RNN class includes input-to-hidden (i2h) and input-to-output (i2o) layers, along with softmax activation to get probabilities for each category.
 
-### Training Process:
+**Training Process:
 - The training function iterates over the characters in a name, updating the hidden state at each step and calculating loss using Negative Log Likelihood Loss.
 
-### Prediction:
+**Prediction:
 - A separate function is provided to predict the category of a name based on the trained model.
 
 ## 12. Hand Written Digits
 In `main.py`, we implement a simple RNN to classify the MNIST digits:
 
-### Dataset Loading:
+**Dataset Loading:
 - The MNIST dataset is loaded using torchvision, which contains images of handwritten digits (0-9).
 - Each image is transformed into a tensor and loaded into batches using DataLoader.
 
-### Model Definition:
+**Model Definition:
 - The RNN class defines the network structure: an RNN layer followed by a fully connected (linear) layer to produce class probabilities.
 - The forward method processes the input sequence and returns the output.
 
-### Training Loop:
+**Training Loop:
 - The model is trained over several epochs, calculating the loss using cross-entropy loss and updating the model weights via backpropagation.
 
-### Testing Phase:
+**Testing Phase:
 - After training, the model's accuracy is evaluated on a test dataset.
 ---
 
