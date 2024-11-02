@@ -5,17 +5,17 @@ This repository is a beginner friendly, step by step tutorial for understanding 
 ---
 
 ## Table of Contents
-1. [neural-networks/1_intro.py - Introduction and Neuron Code](#neural-networks1-intro)
-2. [neural-networks/2_layer.py - Coding a Layer](#neural-networks2-layer)
-3. [neural-networks/3_dot_product.py - Dot Product in Neural Networks](#neural-networks3-dot-product)
-4. [neural-networks/4_batches.py - Batches, Layers, and Objects](#neural-networks4-batches)
-5. [neural-networks/5_hidden_activ.py - Hidden Layer Activation Function (ReLU)](#neural-networks5-hidden-activ)
-6. [neural-networks/6_softmax_activ.py - Softmax Activation Function](#neural-networks6-softmax-activ)
-7. [neural-networks/7_loss.py - Calculating Loss with Categorical Cross-Entropy](#neural-networks7-loss)
-8. [neural-networks/8_implementing_loss.py - Implementing Categorical Cross-Entropy Loss in Classes](#neural-networks8-implementing-loss)
-9. [neural-networks/RNN/rnn.py - RNN Implementation](#neural-networksrnnrnn)
-10. [neural-networks/RNN/itils.py - RNN Utilities](#neural-networksrnnitils)
-11. [neural-networks/RNN/rnn-lstm-gru/main.py - Main Program](#neural-networksrnnmain)
+1. [Learn_Deep_Learning/neural-networks/1_intro.py - Introduction and Neuron Code](#1-introduction-and-neuron-code)
+2. [neural-networks/2_layer.py - Coding a Layer](#2-coding-a-layer)
+3. [neural-networks/3_dot_product.py - Dot Product in Neural Networks](#3-dot-product-in-neural-networks)
+4. [neural-networks/4_batches.py - Batches, Layers, and Objects](#4-batches-layers-and-objects)
+5. [neural-networks/5_hidden_activ.py - Hidden Layer Activation Function (ReLU)](#5-hidden-layer-activation-function-relu)
+6. [neural-networks/6_softmax_activ.py - Softmax Activation Function](#6-softmax-activation-function)
+7. [neural-networks/7_loss_categ.py - Calculating Loss with Categorical Cross-Entropy](#7-calculating-loss-with-categorical-cross-entropy)
+8. [neural-networks/8_implementing_loss.py - Implementing Categorical Cross-Entropy Loss in Classes](#8-implementing-categorical-cross-entropy-loss-in-classes)
+9. [neural-networks/RNN/rnn.py - RNN Implementation](#9-rnn-implementation)
+10. [Learn_Deep_Learning/RNN/utils.py - RNN Utilities](#10-rnn-utilities)
+11. [Learn_Deep_Learning/RNN/rnn-lstm-gru/main.py - Main Program](#11-main-program)
 
 
 ---
