@@ -158,6 +158,11 @@ In `main.py`, we implement a simple RNN to classify the MNIST digits:
 
 **Testing Phase**:
 - After training, the model's accuracy is evaluated on a test dataset.
+
+**For more details on the torch.nn implementation in PyTorch**, refer to the 
+- [PyTorch RNN Documentation](https://pytorch.org/docs/stable/generated/torch.nn.RNN.html)
+- [PyTorch LSTM Documentation](https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html)
+- [PyTorch GRU Documentation](https://pytorch.org/docs/stable/generated/torch.nn.GRU.html)
 ---
 
 ## How to Run the Code
@@ -173,7 +178,6 @@ In `main.py`, we implement a simple RNN to classify the MNIST digits:
 - **Run the Scripts:**
   - For digit classification, run `python main.py`.
   - For name classification, run `python rnn.py`.
-
 ---
 
 ## Conclusion
