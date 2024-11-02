@@ -13,9 +13,10 @@ This repository is a beginner friendly, step by step tutorial for understanding 
 6. [neural-networks/6_softmax_activ.py - Softmax Activation Function](#6-softmax-activation-function)
 7. [neural-networks/7_loss_categ.py - Calculating Loss with Categorical Cross-Entropy](#7-calculating-loss-with-categorical-cross-entropy)
 8. [neural-networks/8_implementing_loss.py - Implementing Categorical Cross-Entropy Loss in Classes](#8-implementing-categorical-cross-entropy-loss-in-classes)
-9. [neural-networks/RNN/rnn.py - RNN Implementation](#9-rnn-implementation)
-10. [Learn_Deep_Learning/RNN/utils.py - RNN Utilities](#10-rnn-utilities)
-11. [Learn_Deep_Learning/RNN/rnn-lstm-gru/main.py - Main Program](#11-main-program)
+9. [neural-networks/RNN/9_optimization.py - Optimization and Derivatives](#9-Optimization-and-Derivatives)
+10. [Learn_Deep_Learning/RNN/utils.py - Loading Data and Processing Inputs](#10-data-loading-and-processing)
+11. [Learn_Deep_Learning/RNN/rnn.py - Last Name Classification](#11-last-name-classification)
+12. [Learn_Deep_Learning/RNN/rnn-lstm-gru/main.py - Hand Written Digits](#12-hand-written-digits)
 
 
 ---
@@ -123,7 +124,25 @@ It combines the forget and input gates into a single update gate. This results i
 
 ## Implementation Details:
 
-## main.py
+## 10. Data Loading and Processing
+This module provides various utility functions for data preprocessing:
+
+- **Data Loading**: Loads names from text files categorized by language, normalizes the names to ASCII, and prepares the data for training.
+- **Tensor Conversion**: Converts letters to one-hot encoded tensors for input to the model.
+
+## 11. Last Name Classification
+In `rnn.py`, we define an RNN for classifying names based on their languages:
+
+### Model Architecture:
+- The RNN class includes input-to-hidden (i2h) and input-to-output (i2o) layers, along with softmax activation to get probabilities for each category.
+
+### Training Process:
+- The training function iterates over the characters in a name, updating the hidden state at each step and calculating loss using Negative Log Likelihood Loss.
+
+### Prediction:
+- A separate function is provided to predict the category of a name based on the trained model.
+
+## 12. Hnad Written Digits
 In `main.py`, we implement a simple RNN to classify the MNIST digits:
 
 ### Dataset Loading:
@@ -139,25 +158,6 @@ In `main.py`, we implement a simple RNN to classify the MNIST digits:
 
 ### Testing Phase:
 - After training, the model's accuracy is evaluated on a test dataset.
-
-## rnn.py
-In `rnn.py`, we define an RNN for classifying names based on their languages:
-
-### Model Architecture:
-- The RNN class includes input-to-hidden (i2h) and input-to-output (i2o) layers, along with softmax activation to get probabilities for each category.
-
-### Training Process:
-- The training function iterates over the characters in a name, updating the hidden state at each step and calculating loss using Negative Log Likelihood Loss.
-
-### Prediction:
-- A separate function is provided to predict the category of a name based on the trained model.
-
-## utils.py
-This module provides various utility functions for data preprocessing:
-
-- **Data Loading**: Loads names from text files categorized by language, normalizes the names to ASCII, and prepares the data for training.
-- **Tensor Conversion**: Converts letters to one-hot encoded tensors for input to the model.
-- 
 ---
 
 ## How to Run the Code
