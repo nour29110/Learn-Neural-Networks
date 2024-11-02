@@ -96,7 +96,7 @@ This file demonstrates the mathematical power behind neural network computations
 
 ---
 ---
-# Contents
+# RNN Contents
 - **main.py**: Implements an RNN to classify handwritten digits from the MNIST dataset.
 - **rnn.py**: Implements a character-level RNN for name classification based on the language of origin.
 - **utils.py**: Contains utility functions for loading data and processing inputs.
