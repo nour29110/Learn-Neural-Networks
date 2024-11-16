@@ -1,4 +1,4 @@
-# Learn Deep Learning, Step by Step Guide
+# Learn Neural Networks, Step by Step Guide
 
 This repository is a beginner friendly, step by step tutorial for understanding Deep Learning from scratch. Each Python file introduces a new concept, gradually building up from the basics of neurons to complex techniques. Start off from neural-networks folder, `1_intro.py` to `9_optimization.py` to start learning about Neural Networks from scratch. Then follow along to learn about Recurrent Neural Networks (RNN), Gated Recurrent Units (GRU), and Long Short-Term Memory (LSTM) networks, using the PyTorch framework.
 
